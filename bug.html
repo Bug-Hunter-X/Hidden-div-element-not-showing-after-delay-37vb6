@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be hidden initially.
+  </div>
+
+  <script>
+    // Incorrect use of display property
+    document.getElementById("myDiv").style.display = "hidden"; 
+
+    //Attempting to show the div after a delay
+    setTimeout(function(){
+        document.getElementById("myDiv").style.display = "block";
+    }, 3000); 
+  </script>
+</body>
+</html>
